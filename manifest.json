@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "New Extension For Notes",
+    "version": "1.0.0",
+    "description": "This is the latest extension I am working on right now",
+    "action": {
+        "default_title": "My Extension Title",
+        "default_popup": "index.html"
+    },
+    "icons":{
+        "128": "Images/pexels-alexander-ant-4585185.jpg"
+    }
+}

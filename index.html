@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS -->
+    <title>Notes List</title>
+</head>
+<body>
+    <section>
+        <h1 id="title" class="title no-margin-silver-border">My Notes Tracker</h1>
+        <input 
+            type="text"
+            class="no-margin-silver-border form-input"
+            id="form-input"
+            placeholder="Please Enter A Note And Click Save"
+        />
+        <span id = "button-container" class="button-container no-margin-silver-border">
+            <button id="save-input-btn">SAVE Input</button>  
+            <button id="save-tab-btn" type="submit">SAVE TAB</button>
+            <button id="history-btn">History</button>
+            <button id="delete-btn">Delete</button>
+        </span>
+        <ol id="ol" class="ol no-margin-silver-border">
+        </ol>
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>
