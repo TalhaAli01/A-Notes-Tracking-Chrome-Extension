@@ -9,5 +9,9 @@
     },
     "icons":{
         "128": "Images/pexels-alexander-ant-4585185.jpg"
-    }
+    },
+    "permissions": [
+        "tabs"
+    ]
 }
+

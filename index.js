@@ -2,7 +2,10 @@ const inputEl = document.getElementById('form-input');
 const saveInputBtn = document.getElementById('save-input-btn');
 const historyBtn = document.getElementById('history-btn');
 const deleteBtn = document.getElementById('delete-btn');
+const saveTabBtn = document.getElementById('save-tab-btn');
 const ol = document.getElementById('ol');
+
+
 
 const creatingObjects = () => () => {
     const allData = [];
@@ -72,7 +75,17 @@ const deletingElements = () => {
     }
 }
 
+const getCurrentTab = () => {
+    const myTabData = [];
+
+    chrome.tabs.query({active: true, currentWindow: true},function(tabs){
+
+    myTabData.push(tabs[0].url)
+    });
+    console.log(myTabData);
+}
+
 saveInputBtn.addEventListener('click', creatingObjects());
 historyBtn.addEventListener('click', retrievingElements);
 deleteBtn.addEventListener('click', deletingElements);
-
+saveTabBtn.addEventListener('click', getCurrentTab);

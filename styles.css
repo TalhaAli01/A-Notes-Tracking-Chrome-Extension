@@ -5,28 +5,34 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     width: 100%;
     min-height: 100%;
     min-width: 800px;
     min-height: 600px;
     color: white;
     background-color: black;
-    font-family: 'Roboto Mono', monospace;;
+    font-family: 'Roboto Mono', monospace;
+    ;
 }
-section{
+
+section {
     width: 80vw;
     margin: 0 auto;
 }
-.title{
+
+.title {
     width: 100%;
     font-size: 3rem;
 }
+
 .no-margin-silver-border {
     margin: 0;
     border: 2px solid grey;
 }
-.form-input{
+
+.form-input {
     width: 100%;
     height: 8vh;
     font-size: 1.5rem;
@@ -36,17 +42,20 @@ section{
     border-radius: 5px;
     text-align: center;
 }
-.form-input::placeholder{
+
+.form-input::placeholder {
     text-align: center;
 }
-.button-container{
+
+.button-container {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     overflow: hidden;
     gap: 0.5rem;
 }
-.button-container *{
+
+.button-container * {
     width: 15rem;
     height: 5rem;
     padding: 1rem 2rem;
@@ -56,22 +65,26 @@ section{
     color: white;
     cursor: pointer;
 }
-#delete-btn{
+
+#delete-btn {
     background-color: rgb(167, 1, 1);
 }
-.ol{
+
+.ol {
     display: flex;
     flex-direction: column;
     justify-content: center;
     list-style: none;
 }
-.ol span{
+
+.ol span {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid white;
     padding: 1rem;
 }
-.ol span li{
+
+.ol span li {
     font-size: 1.5rem;
 }
