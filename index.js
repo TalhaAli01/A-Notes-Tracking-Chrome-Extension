@@ -5,11 +5,15 @@ const deleteBtn = document.getElementById('delete-btn');
 const saveTabBtn = document.getElementById('save-tab-btn');
 const ol = document.getElementById('ol');
 
-
+window.onload = function() {
+  retrievingElements();
+  inputEl.focus();
+};
 
 const creatingObjects = () => () => {
     const allData = [];
     const inputData = inputEl.value;
+    inputEl.value = "";
     const span = document.createElement('span');
     const li = document.createElement('li');
     const input = document.createElement('input');
@@ -45,9 +49,13 @@ const deletingElements = () => {
     }
     const lastItem = newArray[newArray.length - 1];
     ol.innerHTML = lastItem;
+
+
     let elements = ol.children;
     for (let i = 0; i < elements.length; i++) {
         let allInputs = elements[i].lastChild;
+        allInputs.style.width = '32px';
+
         allInputs.addEventListener('click',()=>{
             if (allInputs.checked === true) {
                 let dadElement = allInputs.parentElement;
@@ -81,8 +89,30 @@ const getCurrentTab = () => {
     chrome.tabs.query({active: true, currentWindow: true},function(tabs){
 
     myTabData.push(tabs[0].url)
+    console.log(myTabData[0]);
+
+    const span = document.createElement('span');
+    const li = document.createElement('li');
+    const input = document.createElement('input');
+    const link = document.createElement('a');
+
+    span.appendChild(li);
+    span.appendChild(input);
+    ol.appendChild(span);
+    link.href = myTabData[0];
+    link.innerHTML = myTabData[0];
+    link.target = "_blank";
+    li.appendChild(link);
+    input.type = 'checkbox';
+
+    const allLinksData = [];
+    allLinksData.push({
+        'first': li.innerHTML,
+        'second': ol.innerHTML,
     });
-    console.log(myTabData);
+    console.log(allLinksData);
+    localStorage.setItem('Input Data', JSON.stringify(allLinksData));
+    });
 }
 
 saveInputBtn.addEventListener('click', creatingObjects());

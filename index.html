@@ -14,20 +14,24 @@
 </head>
 <body>
     <section>
-        <h1 id="title" class="title no-margin-silver-border">My Notes Tracker</h1>
+        <h1 id="title" class="title ">My Notes Tracker</h1>
         <input 
             type="text"
-            class="no-margin-silver-border form-input"
+            class="form-input"
             id="form-input"
-            placeholder="Please Enter A Note And Click Save"
+            placeholder="Enter A Note And Click Save"
         />
-        <span id = "button-container" class="button-container no-margin-silver-border">
-            <button id="save-input-btn">SAVE Input</button>  
-            <button id="save-tab-btn">SAVE TAB</button>
-            <button id="history-btn">History</button>
-            <button id="delete-btn">Delete</button>
+        <span id = "button-container" class="button-container">
+            <div class="button-subcontainer-1">
+                <button id="save-input-btn">SAVE Input</button>  
+                <button id="save-tab-btn">SAVE TAB</button>
+            </div>
+            <div class="button-subcontainer-2">
+                <button id="history-btn">History</button>
+                <button id="delete-btn">Delete</button>
+            </div>
         </span>
-        <ol id="ol" class="ol no-margin-silver-border">
+        <ol id="ol" class="ol">
         </ol>
     </section>
     <script src="./index.js"></script>
