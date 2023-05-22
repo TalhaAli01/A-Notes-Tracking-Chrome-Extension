@@ -135,3 +135,14 @@ a {
     color: blue;
     cursor: pointer;
 }
+
+.increase-width{
+    width: 32px;
+}
+
+.red-background{
+    background-color: gray;
+}
+.red-background:hover{
+    background-color: rgb(151, 8, 8);
+}

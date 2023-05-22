@@ -44,6 +44,11 @@ const retrievingElements = () => {
   newData.forEach((element) => {
     ol.innerHTML = element.second;
   });
+  const allSpans = ol.children;
+  for (let i = 0; i < allSpans.length; i++) {
+    allSpans[i].lastChild.classList.remove("increase-width");
+    allSpans[i].classList.remove("red-background");
+  }
 };
 
 const deletingElements = () => {
@@ -59,10 +64,15 @@ const deletingElements = () => {
   let elements = ol.children;
   for (let i = 0; i < elements.length; i++) {
     let allInputs = elements[i].lastChild;
-    allInputs.style.width = "32px";
+    elements[i].classList.add("red-background");
+    allInputs.classList.add("increase-width");
 
     allInputs.addEventListener("click", () => {
       if (allInputs.checked === true) {
+
+      if (confirm("Are you sure you want to delete " + `"${allInputs.parentElement.firstChild.textContent}"` + "?")) {
+        txt = "You pressed OK!";
+        console.log(txt);
         let dadElement = allInputs.parentElement;
         dadElement.remove();
         let newElements = [];
@@ -82,6 +92,10 @@ const deletingElements = () => {
         } else {
           localStorage.clear();
         }
+      };
+      } else {
+        txt = "You pressed Cancel!";
+        console.log(txt);
       }
     });
   }
@@ -107,6 +121,8 @@ const getCurrentTab = () => {
     localStorage.setItem("Input Data", JSON.stringify(allLinksData));
   });
 };
+
+
 
 saveInputBtn.addEventListener("click", creatingObjects());
 historyBtn.addEventListener("click", retrievingElements);
