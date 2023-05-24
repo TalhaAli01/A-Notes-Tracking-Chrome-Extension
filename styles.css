@@ -155,4 +155,16 @@ a {
     section{
         width: 100vw;
     }
+    .button-subcontainer-1 *,
+    .button-subcontainer-2 * {
+        width: 5rem;
+        height: 3rem;
+        padding: 0;
+        font-size: 0.8rem;
+    }
+    .button-container{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
 }
