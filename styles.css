@@ -152,6 +152,9 @@ a {
     body{
         min-width: 100%;
     }
+    #body-el{
+        min-width: 800px;
+    }
     section{
         width: 100vw;
     }

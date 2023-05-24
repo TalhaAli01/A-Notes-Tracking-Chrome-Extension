@@ -5,7 +5,7 @@
     "description": "This is the latest extension I am working on right now",
     "action": {
         "default_title": "My Extension Title",
-        "default_popup": "index.html"
+        "default_popup": "popup.html"
     },
     "icons":{
         "128": "Images/pexels-alexander-ant-4585185.jpg"
