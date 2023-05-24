@@ -138,6 +138,7 @@ a {
 
 .increase-width{
     width: 32px;
+    cursor: pointer;
 }
 
 .red-background{
@@ -145,4 +146,13 @@ a {
 }
 .red-background:hover{
     background-color: rgb(151, 8, 8);
+}
+
+@media screen and (max-width: 610px) {
+    body{
+        min-width: 100%;
+    }
+    section{
+        width: 100vw;
+    }
 }
